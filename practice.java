@@ -291,3 +291,4 @@ class practice{
 
 }
 */recursive dsp function
+//recursive function factor: terminated(return) condition, in(de)crement operator, detector of condition and finite connection
