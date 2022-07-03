@@ -185,7 +185,7 @@ class test_prompt{
 }
 */
 //for nesint for making array
-class test_prompt{
+/*class test_prompt{
 	public static void main(String[] args){
 		
 		just_repeat0_sequential : for(int i = 0 ; i < 10 ; ++i){
@@ -197,3 +197,97 @@ class test_prompt{
 		
 	}				
 }
+*/
+//method
+//factorial
+/*
+class practice{
+	public static void main(String[] args){
+		int num = 3;
+		
+		System.out.println(factorial(num));			
+	}
+
+	public static int factorial(int i){ // which operator?
+		if ( i == 1)		//conditional check
+			return 1; //last condition and exit function
+		else
+			return i*factorial(i-1); // in/output value operating relationship;
+	}		
+	 // Be good at making for repeat process
+	 // recursive function condition's initial value, end point, repeat is computer's role
+}	// recursive function mean detection condital of operator and repeat of operation into function 
+// stackoverflow error : most of error 's recursive function
+
+*/
+/*
+class practice{
+	public static void main(String[] args){
+			int a = -5, b = 5;
+			System.out.println( repeat_range(a,b) );	// n = [-5,5] domain	
+	}
+	
+	public static String repeat_range(int a, int b){
+		int r = 0;
+	
+		if ( a >= b)
+			return "error";
+		else{
+		
+			for ( r = a ; r <= b ; ++r){
+	
+				if( r == 0)
+					System.out.println(x_sig(r) + "\t zero point");
+				else
+					System.out.println( x_sig(r) );
+			}	
+			return "Terminated";
+		}		
+	} 
+
+	public static int x_sig(int n){
+		return 2*impulse(n+2) - impulse(n-4);
+	}
+
+	public static int impulse(int n){ 			//discrete time : n, because of type 'int'
+		if (n==0)
+			return 1;
+		else
+			return 0;
+	}
+}
+*/ //dsp function
+/*
+class practice{
+	public static void main(String[] args){
+		
+		int a = -5;
+		int b = 5;
+		System.out.println(recur_func(a,b));
+	}
+
+	public static String recur_func( int a, int b){
+		
+		int v = a;
+		String mem = "";
+		if ( v > b)
+			return "terminated";
+		else{
+			if ( v == -2)
+				mem =  "2";
+			else if ( v ==  4)
+				mem = "-1";
+			else {
+				if ( v == 0)
+					mem = "0 zero point";
+				else
+					mem = "0";
+			}
+		}
+
+		return mem + " \n" + recur_func(++v,b);
+		
+	}
+
+}
+*/recursive dsp function
