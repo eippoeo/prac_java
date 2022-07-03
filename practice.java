@@ -188,10 +188,10 @@ class test_prompt{
 class test_prompt{
 	public static void main(String[] args){
 		
-		for(int j = 0 ; j < 10 ; ++j){
-			System.out.println();
-			for ( int i = 0 ; i < 10 ; ++i){
-			System.out.print(i +" * " +j+" = "+ i*j+"|" );
+		for(int i = 0 ; i < 10 ; ++i){
+			System.out.println(); //System.out.println() = auto tab, System.out.print() = continunous sentences
+			for ( int j = 0 ; j < 10 ; ++j){ // repeat
+			System.out.print(j +" * " +i+" = "+ i*j+"|" ); // express array columm by raw different print, and location
 			}
 		} 
 		
