@@ -161,6 +161,7 @@ class test_prompt {
 */
 //continue & break
 // 7 times number and 5 times number under 100
+/*
 class test_prompt{
 	public static void main(String[] args){
 	
@@ -172,7 +173,7 @@ class test_prompt{
 			System.out.println("terminated");
 			break;
 		}
-		if( (num % 7 != 0) || (num % 5 != 0) ) //de morgan
+		if( (num % 7 != 0) || (num % 5 != 0) ) //de morgan : exception
 			continue;	
 		else
 			System.out.println(num);
@@ -181,4 +182,18 @@ class test_prompt{
 		
 	}while(num <= 100);
 	}
+}
+*/
+//for nesint for making array
+class test_prompt{
+	public static void main(String[] args){
+		
+		for(int j = 0 ; j < 10 ; ++j){
+			System.out.println();
+			for ( int i = 0 ; i < 10 ; ++i){
+			System.out.print(i +" * " +j+" = "+ i*j+"|" );
+			}
+		} 
+		
+	}				
 }
