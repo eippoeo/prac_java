@@ -290,5 +290,28 @@ class practice{
 	}
 
 }
-*/recursive dsp function
+*/ //recursive dsp function
 //recursive function factor: terminated(return) condition, in(de)crement operator, detector of condition and finite connection
+/*
+class practice {
+
+	public static void main (String[] args){
+		int my_name = 0;
+		view_name name0 = new view_name();
+		
+		System.out.println( name0.name(my_name) );
+
+	}
+
+}
+
+class view_name{
+
+	String name(int i){
+		System.out.println("iyk");
+		return "terminated";
+	}
+
+
+}
+*/
