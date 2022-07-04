@@ -377,7 +377,7 @@ class call {
 //FruitSales
 //3 class (Fruitseller, fruitbuyer, fruitsalesmarket)
 // imagine of rest
-
+/*
 class practice{
 
 	public static void main(String[] args){
@@ -417,7 +417,7 @@ class buyer{
 	int apple_num = 0;
 	
 	public void buy( seller vendor,  int money){	 
-		 apple_num+=vendor.sell(money); 	// my state adapting vendor process and external parameter 
+		 apple_num+=vendor.sell(money); 	// my state adapting vendor process and external parameter , "message passing"
 		account -= money;
 	}
 	
@@ -428,3 +428,198 @@ class buyer{
 		
 	
 }
+*/
+// after all, edit again
+// class == frame(non occupied memory), instance == matrialization(occupied memory)
+// instance method, variable (buy, buyer_state, seller, seller_state, rest of variable in buyer, seller)
+//but difficult frome apling many case
+//many instance
+
+/*
+class practice{
+	public static void main(String[] args){
+		int applex0 = 1000;
+		int applex1 = 2000;
+		int buyer_money = 5000;
+		
+		seller x0 = new seller();
+		seller x1 = new seller();
+		buyer y = new buyer();
+		
+		x0.init_seller(100000, applex0, 100);
+		x1.init_seller(100000, applex1, 100);
+		
+		y.init_buyer(100000, 0);
+	
+		y.buy(x0, buyer_money);	
+		y.buy(x1, buyer_money);
+	
+		x0.state( );
+		x1.state( );
+		y.state( );
+	
+	}
+}
+
+
+class seller{
+
+	// needing resource for process
+	int account; // chaging of mean
+	int apple_price; // stored size, if instance call over 2 times, "final" cant be used, unsafety
+	int  apple_num; // stored	
+	
+	public void init_seller(int now_account ,int now_price ,int now_num){
+		account = now_account;
+		apple_price = now_price;
+		apple_num = now_num;
+	}
+	
+	public int sell ( int extern_money ){
+		int temp = extern_money/apple_price;
+		account += temp*apple_price;
+		apple_num -= temp;
+		
+		return temp;	
+	}
+	
+	public void state(){
+
+		System.out.println("판매자 잔고 : " + account);
+		System.out.println("판매자 사과 : " + apple_num);		
+
+	}
+
+}
+
+class buyer{
+
+	int account; // 
+	int apple_num;
+
+	public void init_buyer(int now_account, int now_apple_num){
+		account = now_account;
+		apple_num = now_apple_num;
+	}
+	
+	public void buy(seller selled_apple ,int money ){	 //buy  give seller money, get rest of money
+		account -= money;
+		apple_num += selled_apple.sell(money); 
+	}
+
+	public void state(){
+
+		System.out.println("구매자 잔고 : " + account);
+		System.out.println("구매자 사과 : " + apple_num);		
+
+	}
+}
+
+*/
+//constructor
+/*
+class practice{
+
+	public static void main(String[] args){
+		
+	number x1 = new number(10);
+	number x2 = new number(20);
+	
+	System.out.println( x1.out_num() );
+	System.out.println( x2.out_num() );
+
+	}
+}
+
+class number{
+	
+	int num0;	
+
+	public number(int num){
+
+		int num0 = num;
+		System.out.println("call constructor");
+	
+	}
+
+	public int out_num(){
+
+		return num0;
+
+	}
+
+}
+*/
+/*
+class practice {
+	public static void main(String[] args){
+	
+		seller x0 = new seller(100000, 2000, 100);
+		seller x1 = new seller(50000, 1500, 200);
+		
+		buyer y0 = new buyer(1000000 , 0);
+		
+		y0.buy(x0,1500);
+		y0.buy(x1,1500);
+		
+		x0.state();
+		x1.state();
+		y0.state();
+		
+	}	
+}
+
+class seller{
+
+	int account, apple_price, apple_num;
+	
+
+	public seller(int bullet, int weapon, int resource){
+		account = bullet;
+		apple_price = weapon;
+		apple_num = resource; 
+		System.out.print("buy my apple~");
+	}
+	
+	public int sell( int money ){
+		
+		int temp_num = money/apple_price ;
+		account += temp_num*apple_price;
+		apple_num -= temp_num;
+		
+		return temp_num;
+			
+	}
+	
+	public void state(){
+
+	System.out.println("판매자 남은 돈 : " + account);
+	System.out.println("판매자 사과 가격 : " + apple_price);
+	System.out.println("판매자 사과 수 : " + apple_num);
+
+	}	
+}
+
+
+class buyer{
+
+	int account, apple_num;
+
+	public buyer(int bullet, int resource){
+		account = bullet;
+		apple_num = resource;
+		System.out.println("where is sweat apple?");
+	}
+
+	public void buy(seller deal, int bullet){
+		account -= bullet;
+		apple_num += deal.sell(bullet);
+	}
+
+	public void state(){
+		System.out.println("바이어 잔고 : " + account);
+		System.out.println("바이어 사과 : " + apple_num);
+	}
+
+}
+*/ must be optimized
