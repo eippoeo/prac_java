@@ -290,28 +290,141 @@ class practice{
 	}
 
 }
-*/ //recursive dsp function
+*/
+//recursive dsp function
 //recursive function factor: terminated(return) condition, in(de)crement operator, detector of condition and finite connection
 /*
-class practice {
+class practice{
 
-	public static void main (String[] args){
-		int my_name = 0;
-		view_name name0 = new view_name();
+	
+	public static void main(String[] args){
+	
+		call i = new call();
+	
+		System.out.println( " method 호출 전 : " + i.out_num() );
+	
+		out_num2(i); // method into object
+	
+		System.out.println( " method 호출 후 : " + i.out_num() );
 		
-		System.out.println( name0.name(my_name) );
-
 	}
+
+
+	public static void out_num2(call num){  //object parameter
+		num.add(10);
+	}
+	
+	
 
 }
 
-class view_name{
+class call{      			//내부 처리class
 
-	String name(int i){
-		System.out.println("iyk");
-		return "terminated";
+	int num0 = 0;		 //data storage
+
+	public void add(int i){
+		
+		num0 += i ; 	//  process
+		
+	}	
+	
+	public int out_num(){
+	
+		return num0; 	// out global value
+	
 	}
-
-
+	
 }
 */
+//repeat
+/*
+class practice{
+	
+	public static void main(String[] args){
+			
+		call i = new call();
+		
+		System.out.println("메소드 호출" + i.outnum() );
+		
+		add(i);
+		
+		System.out.println("메소드 재호출" + i.outnum() );		
+		
+		
+	}
+
+	public static void add(call m){
+
+		m.addnum(15);
+
+	}
+
+}
+class call {
+	
+	int stack_num = 0 ;
+
+	public void addnum(int a){
+		stack_num += a;	
+	}
+
+	public int outnum(){
+		return stack_num; // output
+	}
+	
+
+}*/
+//FruitSales
+//3 class (Fruitseller, fruitbuyer, fruitsalesmarket)
+// imagine of rest
+
+class practice{
+
+	public static void main(String[] args){
+		seller x0 = new seller();
+		buyer y0 = new buyer();
+		y0.buy( x0, 14000 ); // between seller and buyer, processing with money, starting point's requast of buyer
+	
+		x0.seller_state();
+		y0.buyer_state();
+	}
+}
+
+class seller{
+
+	int account = 0;
+	int apple_num = 100;
+	final int apple_price = 2000;	//resource
+	
+	public int sell( int money ){		//exteral parameter corresponding
+	
+	int num = money/apple_price;
+	
+	account += money;
+	apple_num -= num;
+	return num;
+	
+	}
+	
+	public void seller_state( ){
+		System.out.println("판매자 돈 : "+ account);
+		System.out.println("판매자 사과 수 : " + apple_num);
+	}	
+
+}
+class buyer{
+	int account = 1000000;
+	int apple_num = 0;
+	
+	public void buy( seller vendor,  int money){	 
+		 apple_num+=vendor.sell(money); 	// my state adapting vendor process and external parameter 
+		account -= money;
+	}
+	
+	public void buyer_state( ){
+		System.out.println("구매자 돈 : "+account);
+		System.out.println("구매자 사과 수 : "+apple_num);
+	}	
+		
+	
+}
