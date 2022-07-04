@@ -394,7 +394,7 @@ class seller{
 
 	int account = 0;
 	int apple_num = 100;
-	final int apple_price = 2000;	//resource
+	final int apple_price = 2000;	//resource --> *** Do large letter when constant
 	
 	public int sell( int money ){		//exteral parameter corresponding
 	
