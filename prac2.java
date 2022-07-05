@@ -40,7 +40,7 @@ class prac2{
 	public static void main(String[] args){
 		//area.Circle a = new area.Circle(1.0);
 		Circle p = new Circle(1.0);	 		//use class in package
-		phi z = new phi();
+		phi z = new phi();				// be careful ambiguous
 		System.out.println(z.phie());
 		//System.out.println(a.area());
 		System.out.println(p.perimeter());
