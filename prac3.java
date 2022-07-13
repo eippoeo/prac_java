@@ -340,3 +340,52 @@ class person{
 
 }
 */ //by method overloading, seperating account confirm
+/*
+class prac3{
+	public static void main(String[] args){
+		person p0 = new person(930102, 842399 );
+		person p1 = new person(931211);
+		p0.ac_out();
+		p1.ac_out();
+	}
+}
+
+class person{
+
+	private int perid;
+	private int milid;
+	private int birthyear;
+	private int birthmonth;
+	private int birthday;
+
+	public person(int p, int mil){
+		this.perid = p;
+		this.milid = mil;
+		birthyear = p/10000;
+		birthmonth = (p%10000)/100;
+		birthday = p%100;
+	}
+
+	public person(int p){
+		this(p,0);
+	}
+
+	public void ac_out(){
+		if ( milid != 0){
+			System.out.println("주민번호 : "+perid);
+			System.out.println("군번 " + milid);
+			System.out.println("생년 " + birthyear);
+			System.out.println("생월 " + birthmonth);
+			System.out.println("생일 " + birthday);
+		}
+		else{
+			System.out.println("주민번호 : "+perid);
+			System.out.println("군번 없음 : " +milid);
+			System.out.println("생년 " + birthyear);
+			System.out.println("생월 " + birthmonth);
+			System.out.println("생일 " + birthday);
+		}
+	}
+
+}
+*/ // key word this done
