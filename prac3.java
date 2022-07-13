@@ -273,6 +273,7 @@ class simplenumber{
 	}
 }
 */
+/*
 class prac3{
 
 	public static void main(String[] args){
@@ -300,3 +301,42 @@ class simplenumber{
 		return new simplenumber();
 	}
 }
+*/
+//overloading
+//again practice as thought, seperating account by constructor with method parameter
+/*
+class prac3{
+
+	public static void main(String[] args){
+		
+		person p0 = new person(950707, 160324);
+		person p1 = new person(960303);
+		p0.p_out();
+		p1.p_out();
+
+	}
+
+}
+class person{
+	private int pid, milid;
+
+	public person(int p){
+		pid = p;
+		milid = 0;	
+	}
+	public person( int p, int m){
+		pid = p;
+		milid = m;
+	}
+
+	public void p_out (){
+		System.out.println("식별 : "+ pid);
+		
+		if ( milid != 0)
+			System.out.println("군 식별 : " + milid);
+		else
+			System.out.println("군 식별 : 군관련 없음");
+	}
+
+}
+*/ //by method overloading, seperating account confirm
