@@ -388,4 +388,37 @@ class person{
 	}
 
 }
-*/ // key word this done
+*/ // key word 'this' done
+//String
+/*
+class prac3{
+	public static void main(String[] args){
+		java.lang.String str0 = "Hellow world";
+		int strlen0 = str0.length();
+		System.out.println("영어 글자수 " + strlen0);
+		int strlen1 = "안녕 jdk".length();
+		System.out.println("한글 글자수 " + strlen1);
+		
+			
+	}
+}
+*/
+class prac3{
+	public static void main(String[] args){
+		
+	String str0 = "my string";
+	String str1 = "my string";		//with str0, same instance address
+	String str2 = "your string";
+	
+	if ( str0 == str1)
+		System.out.println("동일 인스턴스");
+	else
+		System.out.println("다른 인스턴스");
+
+	if ( str0 == str2)
+		System.out.println("동일 인스턴스");
+	else
+		System.out.println("다른 인스턴스");
+	
+	}
+}
