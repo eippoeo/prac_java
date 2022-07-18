@@ -403,6 +403,7 @@ class prac3{
 	}
 }
 */
+/*
 class prac3{
 	public static void main(String[] args){
 		
@@ -422,3 +423,96 @@ class prac3{
 	
 	}
 }
+*/
+/*
+class prac3 {
+	
+	public static void main(String[] args){
+		System.out.println("beauty inside".concat(" mind ") );
+		System.out.println("beauty".concat(" is ").concat(" varierty "));
+		String str0 = "expert";
+		String str1 = "expert";
+		String str2 = "experts";
+		String str3 = "excess";
+		String str4 = "apple";
+		System.out.println(str0.compareTo(str1));
+		System.out.println(str0.compareTo(str2));	
+		System.out.println(str0.compareTo(str3));
+		System.out.println(str0.compareTo(str4));
+	}
+	
+}
+*/ // String instance test
+/*
+class prac3{
+	public static void main(String[] args){
+		String str1 = "lemon";
+		String str2 = "lemon";
+		String str3 = new String(str2);
+		
+		if (str1 == str2)
+			System.out.println("str1과 str2는 동일 인스턴스 참조");
+		else
+			System.out.println("str1과 str2는 다른 인스턴스 참조");
+		
+		if (str2 == str3)
+			System.out.println("str2와 str3는 동일 인스턴스 참조");
+		else
+			System.out.println("str2와 str3는 다른 인스턴스 참조");
+	}
+}
+*/
+/*
+class prac3{
+	public static void main(String[] args){
+
+		java.lang.String str = "hellow world";
+		
+		int strL = str.length();
+		System.out.println("스트링 길이 : " + str.length());
+		System.out.println("한글 길이 : " +"한글길이".length());
+	}
+}
+*/
+/*
+class prac3{
+	public static void main(String[] args){
+		
+		String str0 = "Str";
+		String str1 = "Str1";
+		String str2 = "Str1";
+
+	if ( str1 == str2)
+		System.out.println("동일 인스턴스 생성");
+	else
+		System.out.println("다른 인스턴스 생성");
+
+	if ( str0 == str2)
+		System.out.println("동일 인스턴스 생성");
+	else
+		System.out.println("다른 인스턴스 생성");
+			
+	}
+}
+*/
+/*
+class StringMethod{
+
+	public static void main(String[] args)
+	{
+		String str0 = "efficiently";
+		String str1 = " and ";
+		String str2 = "simple";
+		String str3 = str0.concat(str1).concat(str2);
+	
+		System.out.println(str3);
+		System.out.println("str3 문자열 길이 : "+ str3.length());
+		
+		if(str1.compareTo(str0) < 0)
+			System.out.println("str1 < str0");
+		else
+			System.out.println("str1 > str0");
+	}	
+}
+*/
+//copy instance
