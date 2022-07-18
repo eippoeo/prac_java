@@ -516,3 +516,99 @@ class StringMethod{
 }
 */
 //copy instance
+/*
+class prac3{
+	public static void main(String[] args){
+		String str0 = "lemontree";
+		String str1 = "lemontree";
+		String str2 = new String(str1);
+		
+		if ( str0 == str1)
+			System.out.println("동일 인스턴스");
+		else
+			System.out.println("다른 인스턴스");
+		if ( str1 == str2)
+			System.out.println("동일 인스턴스");
+		else
+			System.out.println("다른 인스턴스");
+		
+
+	}
+}
+*/
+/*
+class prac3{
+	public static void main(String[] args)
+	{
+		String str1 = "lemon" + "tree";
+		String str2 = "lemon".concat(String.valueOf('a'));
+		String str3 = "lemon".concat(String.valueOf(7));
+		String str4 = 3+ "lemon" + 4;
+		str4 += '!';
+		
+		System.out.println(str1);
+		System.out.println(str2);
+		System.out.println(str3);
+		System.out.println(str4);
+
+	
+	}
+}
+*/ // valueOf('a') = "a", valueOf(4) = "4"
+/*
+class prac3{
+	public static void main(String[] args){
+		
+		StringBuilder sbuf = new StringBuilder("buf");
+		sbuf.append(25);
+		System.out.println(sbuf);
+		sbuf.append('a');
+		System.out.println(sbuf);
+		sbuf.append("b").append(true);
+		System.out.println(sbuf);
+		
+		sbuf.insert(0, false);
+		System.out.println(sbuf);
+		sbuf.insert(6, "class");
+		System.out.println(sbuf);
+	}
+}
+*/ //using StringBuilder
+/*
+class prac3 {
+	public static void main(String[] args){
+		adder ad = new adder();
+		ad.add(1).add(2).add(3).output();
+	}
+}
+
+class adder{
+	private int num;
+	public adder(){ num = 0; }
+	
+	public adder add ( int num ){
+		this.num += num;
+		return this;	
+	}
+	
+	public void output(){
+		System.out.println("add out : " + num);
+	}
+}
+*/
+
+class prac3{
+	public static void main(String[] args){	
+		StringBuilder str4 = new StringBuilder().append(1).append("tree").append(2);
+		System.out.println(str4);
+		str4.toString();
+		System.out.println(str4);
+		StringBuilder str3 = new StringBuilder().append(1).append(2).append("t");
+		str3.toString();
+		System.out.println(str3);
+		StringBuilder str0 = new StringBuilder(); //already allocate space
+		str0.append(1).append("flew");
+		System.out.println(str0);
+		
+	}
+}
