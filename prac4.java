@@ -101,6 +101,7 @@ class prac4{
 	}
 }
 */
+/*
 import java.util.Scanner;
 
 class prac4{
@@ -132,3 +133,4 @@ class prac4{
 			System.out.printf("당신이 %.2f 만큼 크군요?", term);
 	}
 }
+*/
