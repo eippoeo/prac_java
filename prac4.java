@@ -134,3 +134,97 @@ class prac4{
 	}
 }
 */
+/*
+import java.util.Scanner;
+class prac4{
+	public static void main(String[] args){
+		int[] b = {1,2,3};
+		int sum = 0;
+		for(int j = 0 ; j <3 ;++j)
+			sum+=b[j];
+		System.out.println(sum);
+	}
+}
+*/
+/*
+import java.util.Scanner;
+class prac4{
+	public static void main(String[] args){
+		String[] s = {"java","flex","ruby"};
+		for( int a = 0 ; a < s.length ; ++a)
+			System.out.println(s[a]);
+	}
+}
+*/
+/*
+class prac4{
+	public static void main(String[] args){
+		int[] i = {1,2,3,4,5,6};
+		int[] ref;
+		ref = prac4.array(i, 7);
+		if(i == ref)
+			System.out.println("동일배열참조");
+		else
+			System.out.println("다른배열참조");
+		
+		for(int j = 0 ; j < ref.length; ++j){
+			System.out.print(ref[j]+"\t");
+		}
+			
+		
+		
+	}
+	public static int[] array(int[] i, int num){
+		int sum = 0;
+		for( int j = 0 ; j < i.length ; ++j){
+			i[j] += num;
+		}
+		
+		return i;
+	}
+
+	
+}
+*/
+//q
+/*
+class prac4{
+
+	public static void main(String[] args){
+		
+		int[] array = {59,12,35,222,4,3,123};
+		int min = prac4.minValue(array);
+		int max = prac4.maxValue(array);
+		
+		System.out.println(min);
+		System.out.println(max);
+		
+				
+	}
+
+	public static int minValue(int[] arr){
+		
+		int min1 = arr[0];
+		for( int j = 0; j < arr.length ; ++j){
+			if ( arr[j] < min1 )
+				min1 = arr[j];
+			else
+				min1 = min1;
+		}
+		return min1;	
+	}
+	public static int maxValue(int[] arr){
+		int max1 = arr[0];
+		for( int j = 0; j < arr.length ; ++j){
+			if (arr[j] > max1)
+				max1 = arr[j];
+				
+			else
+				max1 = max1;
+		}
+		
+		return max1;	
+	}
+
+}
+*/
