@@ -228,3 +228,129 @@ class prac4{
 
 }
 */
+/*
+class prac4{
+	public static void main(String[] args){
+		int[][] array = new int[3][4];
+		for (int i = 0 ; i < array.length ; ++i){
+		for ( int j = 0; j < array[i].length ; ++j){
+			array[i][j] = i+j;
+			System.out.print("\t"+array[i][j]);
+			if ( j == array.length)
+				System.out.println("");
+		}
+		}
+		
+	}
+}
+*/
+/*
+class prac4{
+	public static void main(String[] args){
+	
+		int[][] array = new int[][]
+		{	{1,2},
+			{1,2,3},
+			{1,2,3,4}
+		};
+		
+		for (int a = 0 ; a < array.length ; ++a){
+		for ( int b = 0; b < array[a].length; ++b){
+			System.out.print(array[a][b]);
+			if ( b == array[a].length - 1)
+				System.out.println("");	
+		}
+		}
+	
+	
+	}
+}
+*/
+/*
+class prac4{
+	public static void main(String[] args){
+		int[] ary = {1,2,3};
+		int sum = 0;
+		for ( int e : ary)
+			sum += e;
+		System.out.println(sum);
+
+		for ( int e : ary){
+			++e;
+			System.out.print(e);
+		}
+
+		System.out.println("");
+
+		for ( int e : ary){
+			System.out.print(e);
+		}
+
+
+	}
+}
+*/
+/*
+import java.util.Scanner;
+
+class prac4{
+
+		public static void main(String[] args){
+		
+			int row, columm;
+			row=5;
+			columm = 5;
+			int[][] ary = new int[row][columm];
+			for ( int a = 0; a < row ; ++a){
+				for ( int b = 0 ; b < columm ; ++b){
+					if ( a < b)
+						ary[a][b] = a;
+					else if( a == b )
+						ary[a][b] = 1;
+					else
+						ary[a][b] = b;
+				}
+			}
+
+			for ( int[] r : ary){
+				for ( int c : r){
+					System.out.print(c);
+				}
+				System.out.println("");
+			}
+			
+		}
+
+}
+*/
+class prac4{
+	public static void main(String[] args)
+	{
+		Number[] arr = new Number[]{
+			new Number(2);
+			new Number(4);
+			new Number(8);
+		}
+		
+		for( int e : arr)
+			e.num++;
+		for(Number e : arr)
+			System.out.print(e.getNum);
+		System.out.println("");
+		for(Number e : arr)
+		{
+			e = new Number(5);
+			e.num+=2;
+			System.out.print(e.getNum()+" ");
+		}
+		System.out.println(" ");
+		for(Number e : arr)
+			System.out.println(e.getNum()+" ");
+	}
+}
+
+class Number{
+	public int num;
+	public Number(int num){ this.num = num; }
+	public int getNum() { return num; }
+}
