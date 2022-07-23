@@ -323,19 +323,20 @@ class prac4{
 
 }
 */
+/*
 class prac4{
 	public static void main(String[] args)
 	{
 		Number[] arr = new Number[]{
-			new Number(2);
-			new Number(4);
-			new Number(8);
-		}
+			new Number(2),
+			new Number(4),
+			new Number(8),
+		};
 		
-		for( int e : arr)
+		for( Number e : arr)
 			e.num++;
 		for(Number e : arr)
-			System.out.print(e.getNum);
+			System.out.print(e.getNum()+" ");
 		System.out.println("");
 		for(Number e : arr)
 		{
@@ -345,7 +346,7 @@ class prac4{
 		}
 		System.out.println(" ");
 		for(Number e : arr)
-			System.out.println(e.getNum()+" ");
+			System.out.print(e.getNum()+" ");
 	}
 }
 
@@ -354,3 +355,12 @@ class Number{
 	public Number(int num){ this.num = num; }
 	public int getNum() { return num; }
 }
+*/
+/*
+class prac4{
+	public static void main(String[] args){
+		for(String e : args)
+			System.out.println(e);
+	}
+}
+*/
