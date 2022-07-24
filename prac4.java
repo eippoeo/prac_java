@@ -364,3 +364,154 @@ class prac4{
 	}
 }
 */
+import java.util.Scanner;
+
+class prac4{
+
+	public static void main(String[] args){
+		Scanner scn = new Scanner(System.in);
+		int size = 100;
+		info[] member = new info[size];
+			
+		int loop = 1;
+		int j = 0;
+		while( loop==1){
+			System.out.println("\n선택하세요\n");
+			System.out.println("1. 데이터 입력 ");
+			System.out.println("2. 데이터 검색 ");
+			System.out.println("3. 데이터 삭제 ");
+			System.out.println("4. 프로그램 종료 ");
+			System.out.print("선택 : ");
+			int sel = scn.nextInt();
+			System.out.println("");
+			
+			if ( sel == 1 ){
+				Save sav = new Save();
+				if ( j < size-1){
+					if( member[j] == null)
+						member[j]=sav.input();
+					else
+						System.out.println("안 비었습니다.");	
+					++j;	
+				}
+
+				else
+					j = 0;
+				System.out.println("데이터 입력이 완료되었습니다.");
+			}
+		
+			else if( sel == 2){
+				
+				System.out.print("이름 : ");
+				String name = scn.next();
+				for(int a = 0 ; a < size ; ++a){ 
+					Search s0 = new Search(member[a]);
+					s0.Search_out(name);
+				}
+					
+					
+				
+				
+			}
+			
+			else if( sel == 3){
+				
+			}
+				
+			else{
+				System.out.println("program terminated");
+				loop = -1;
+			}
+			
+			
+		}
+	}
+
+	
+}
+
+class info{
+	private String name, phone, birth;
+
+	public info(String name, String phone, String birth){
+		this.name =name;
+		this.phone = phone;
+		this.birth = birth;
+	}
+	public String info_name(){
+		return this.name;
+	}
+	public String info_phone(){
+		return this.phone;
+	}
+	public String info_birth(){
+		return this.birth;
+	}
+	
+}
+
+class Save{
+	
+	info account;
+	
+	public Save (){
+		account = null;	
+	}
+	
+	public info input(){
+
+		Scanner scn = new Scanner(System.in);
+		
+		System.out.println("데이터 입력을 시작합니다....");
+		System.out.print("이름 : ");
+		String name = scn.next();
+		System.out.print("전화번호 : ");
+		String phone = scn.next();
+		System.out.print("생년월일 : ");
+		String birthy = scn.next();
+		String birthm = scn.next();
+		String birthd = scn.next();
+		String birth = birthy + birthm + birthd;
+		
+		this.account = new info(name, phone, birth);
+
+		return this.account;
+
+	} 
+
+		
+}
+
+
+class Search{
+
+	info mem;	
+
+	public Search(info mem){
+		this.mem = mem;
+	}
+
+	public void Search_out( String name){
+
+			System.out.println("데이터 검색을 시작합니다.....");
+			
+
+			if ( this.mem.info_name() == name){
+				
+				System.out.println("name : " + this.mem.info_name());
+				System.out.println("phone : " + this.mem.info_phone());	
+				System.out.println("birth : " + this.mem.info_birth());
+			
+			}
+			else
+				System.out.println("맞는 데이터가 없습니다.");
+			
+			System.out.println("데이터 검색이 완료되었습니다.");		
+	}
+}
+
+
+class Delete{
+
+}
+
